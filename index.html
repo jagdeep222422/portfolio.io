@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Narendra Nath Panda Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- fontawesome start -->
+	<link rel="stylesheet" href="css/fontawesome-free-6.5.2-web/css/all.css">
+	<!-- fontawesome End -->
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html"><i class="fa-solid fa-user-tie"></i> Narendra Nath Pnada</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span><i
+									class="fa-solid fa-house"></i> Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span><i
+									class="fa-solid fa-user-tie"></i> About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span><i
+									class="fa-solid fa-sheet-plastic"></i> Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span><i
+									class="fa-solid fa-building-shield"></i> Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span><i
+									class="fa-regular fa-address-book"></i> Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- ---------- HOME TAB START ----------- -->
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Narendra Nath Panda</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Engineer  ',
+										'YouTuber  ',
+										'Teacher   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Android & Web Developer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://drive.google.com/file/d/1C-ANlvmhDEWxvNKa0jXxVFsuKCKVDV0M/view?usp=sharing"
+										class="btn btn-primary py-3 px-4">Download CV <i
+											class="fa-solid fa-file-pdf"></i>
+									</a>
+									<a href="https://github.com/NarendraNathPanda"
+										class="btn btn-white btn-outline-white py-3 px-4">My works
+										<i class="fa-solid fa-person-digging"></i>
+									</a>
+									<a href="https://nnpssb.blogspot.com/"
+										class="btn btn-primary btn-outline-white py-3 px-4">My Blogs <i
+											class="fa-solid fa-thumbtack"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ---------- HOME TAB END ----------- -->
+
+
+
+	<!-- ---------- ABOUT TAB START ----------- -->
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Narendra Nath Panda</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Android Developer</span>
+											</p>
+											<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+											<p><span class="title-s">Address: </span> <span>Kolkata, India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Web development</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Android</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4"><i class="fa-solid fa-user-tie"></i> About Me</h2>
+
+								<p>A coder with proficiency in Web Development along with a knowledge in Android with
+									Java. Eager to learn and develop new skills,
+									deep dive into new technologies and be a part of an organization where I can
+									contribute to its success with my skills and gain
+									experience along with knowledge as a fresher.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Android &amp; Web-Developer</span>
+									</li>
+									<li class="d-flex"><span>Domain:</span> <span>Android, java, Python, ML, Ecommerce
+											&amp;
+											Digital Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Bengali</span></li>
+									<li class="d-flex"><span>Programming Language:</span> <span>C, C++, JAVA, Python,
+											javaScript, kotlin, xml, html, css &amp;
+											json</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, Excel, Git, Docker &amp;
+											Web-Development</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Drawing, Coding,
+											Teaching, crypto mining & Trading</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/narendra-nath-panda-574746216/"
+										class="btn btn-primary py-3 px-3"><i class="fa-brands fa-linkedin"></i>
+										LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ---------- ABOUT TAB END ----------- -->
+
+
+
+	<!-- ---------- RESUME TAB START ----------- -->
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4"><i class="fa-solid fa-sheet-plastic"></i> Resume</h2>
+					<p>A coder with proficiency in Web Development along with a knowledge in Android with Java. Eager to
+						learn and develop new skills,
+						deep dive into new technologies and be a part of an organization where I can contribute to its
+						success with my skills and gain
+						experience along with knowledge as a fresher.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4"><i class="fa-solid fa-business-time"></i> Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-Present</span>
+						<h2>Senior Web-Developer</h2>
+						<span class="position">Start-up Company</span>
+						<p class="mt-4">A Senior Web Developer is a highly skilled professional responsible for designing, 
+							developing, and maintaining complex web applications. They possess in-depth knowledge of both front-end 
+							and back-end technologies and are experienced in leading projects and mentoring junior developers. 
+							Here are the key responsibilities and skills associated with this role:
+						<ul>
+							<li>Key Responsibilities: 
+								Web Application Development: 
+								Design, develop, and maintain high-quality web applications.
+								Write clean, scalable, and efficient code.
+								Ensure the technical feasibility of UI/UX designs.
+								.</li>
+							<li>Project Leadership:
+
+								Lead and manage development projects from concept to deployment.
+								Collaborate with cross-functional teams to define project requirements and specifications.
+								Ensure timely delivery of projects.
+							</li>
+							<li>Code Review and Quality Assurance:
+
+								Conduct code reviews to maintain code quality and standards.
+								Implement best practices for testing and debugging.
+							</li>
+							<li>
+								Mentorship:
+
+								Mentor and guide junior developers.
+								Provide technical advice and support to team members.
+							</li>
+							<li>
+								As a Senior Web Developer, you will play a pivotal role in designing, developing, and maintaining high-quality web applications. Your responsibilities include leading a team of developers, collaborating with cross-functional teams, and ensuring the delivery of scalable, robust, and secure web solutions. You will leverage your extensive knowledge of front-end and back-end technologies to architect innovative features, optimize performance, and improve user experience. Your expertise in modern development practices, problem-solving abilities, and mentorship skills will be critical in driving the success of web projects and advancing the technical growth of your team.
+							</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug. 2023-sep. 2023</span>
+						<h2>Android Developer</h2>
+						<span class="position">Mode : online | Internship Program | CipherByte Technologies
+						</span>
+						<p class="mt-4">CipherByte Technologies is an online platfrom to provide verious type of
+							Internship Program. My domin is an Android Developer.
+						<ul>
+							<li>In-depth Android Studio research and analysis to create online web applications. As a result
+								This app has ~100% website support and growth and 100% accuracy in applications.</li>
+							<li>Multiple training questions and test sessions are distributed on analytical results like marks.</li>
+							<li>For user dashboards showing test results and other information, involved data
+								Integration and its feature enhancement.
+							</li>
+							<li>
+								As an Android Developer, you will be responsible for designing, building, and maintaining high-performance and responsive mobile applications for the Android platform. Your role involves collaborating with cross-functional teams to define, design, and ship new features, ensuring a seamless user experience. You will leverage your expertise in Java/Kotlin, Android SDK, and various development tools to write clean, efficient, and maintainable code. Additionally, you will troubleshoot and fix bugs, continuously discover and implement new technologies to maximize development efficiency, and contribute to all phases of the development lifecycle. Your innovative approach and problem-solving skills will drive the creation of cutting-edge mobile solutions.
+							</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<!-- Education Section Start -->
+
+			<div class="row">
+				<h1 class="big-4"><i class="fa-solid fa-school-circle-check"></i> Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"><i class="fa-solid fa-clock-rotate-left"></i> 2021-2024</span>
+						<h2>Bachelor of Technology</h2>
+						<span class="position"><i class="fa-solid fa-school-circle-check"></i> B. P. Poddar Institute of
+							Management and Technology</span>
+						<p class="mt-4"><i class="fa-solid fa-book-open-reader"></i> Course : Computer Science and
+							Engineering</p>
+						<p class="mt-4"><i class="fa-solid fa-user-graduate"></i> Grade : First class distinction.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"><i class="fa-regular fa-calendar-check"></i> 2018-2021</span>
+						<h2>Diploma</h2>
+						<span class="position"><i class="fa-solid fa-school-circle-check"></i> Kingston Polytechnic
+							College</span>
+						<p class="mt-4"><i class="fa-solid fa-book-open-reader"></i> Course : Diploma in Computer
+							Science and Technology</p>
+						<p class="mt-4"><i class="fa-solid fa-user-graduate"></i> Grade: First class distinction.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Education Section End -->
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1C-ANlvmhDEWxvNKa0jXxVFsuKCKVDV0M/view?usp=sharing"
+							class="btn btn-primary py-4 px-5">Download CV <i class="fa-solid fa-file-pdf"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ---------- RESUME TAB END ----------- -->
+
+
+	<!-- ---------- PROJECT TAB START ----------- -->
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4"><i class="fa-solid fa-code"></i> Projects</h2>
+					<p>Below are the sample projects on SQL, HTML, CSS, Python, Machine Learning, php, javaScript, java
+						& Visual Basic 6.0.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/NarendraNathPanda/Car_Rental_System_Software"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NarendraNathPanda/Car_Rental_System_Software">Car Rental
+									Software</a></h3>
+							<p>A Car Rental System Software app based on Web Application</p>
+							<p>
+								A Car Rental System to search and booking in your Rent Car
+								to ride in your booking day with sign in/sign up
+								authentication with the help of javaScript.
+							</p><span><i class="fa-solid fa-code"></i> Technologies used : php, JavaScript, HTML,
+								CSS,SQL.</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/NarendraNathPanda/Online-Bus-Ticket-Booking-System"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NarendraNathPanda/Online-Bus-Ticket-Booking-System">Online
+									Bus Ticket Booking System</a></h3>
+							<p>This is a project with php. It functions
+								completed. You can try it by signing up, you will receive an
+								email after few moments of signing up.
+							</p><span><i class="fa-solid fa-code"></i> Technologies used : HTML, CSS, php,SQL and
+								javascript.</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/NarendraNathPanda/visual-Basic-6.0-Image-Processing-for-Iteration-of-Time-s/blob/main/Image%20Processing%20for%20Iteration%20of%20Time's/Output/Screenshot%20(condation%201).png"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NarendraNathPanda/visual-Basic-6.0-Image-Processing-for-Iteration-of-Time-s/tree/main">Image
+									Processing for Iteration of Time's</a></h3>
+							<p>Designed a visual basic 6.0 dashboard for Image Processing for Iteration of Time's to
+								track and analyze the Iteration of time data acorss the image.</p>
+							<p>This is a project developed during Smart project work 2021.
+								I worked on most of the parts of the Design, coding &
+								testing .
+							</p><samp><i class="fa-solid fa-code"></i> Technologies used : Microsoft Visual Basic 6.0
+								Application.</samp>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/NarendraNathPanda/Mario-Game-Program-In-Python/blob/master/start.png"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NarendraNathPanda/Mario-Game-Program-In-Python/tree/master">Mario
+									Game Program In Python</a></h3>
+							<p>Used multiple machine learning models to implement a basic Mario Game.it's a simple
+								interface and also user friendly game.
+
+							</p><span><i class="fa-solid fa-code"></i> Technologies used : Python.</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/NarendraNathPanda/mobile-price-prediction-using-ML-python-/blob/master/Mobile%20price%20pradiction%20using%20ML.ipynb"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NarendraNathPanda/mobile-price-prediction-using-ML-python-">Mobile
+									Price Prediction using ML in Python</a></h3>
+							<p>Developed a ML model to give various recommendations of this Project,On the basis of the
+								mobile Specification like Battery power, 3G enabled , wifi ,Bluetooth, Ram etc we are
+								predicting Price range of the mobile &amp; services
+								on target customer groups.
+							</p><span><i class="fa-solid fa-code"></i> Technologies used : Python, machine
+								learning.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="15">0</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="10">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="20">0</strong>
+							<span>Mentored Students</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="10">0</strong>
+							<span>Group project</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; Coding related issues </h4>
+						<br>
+						<p><a href="https://github.com/NarendraNathPanda" class="btn btn-primary py-3 px-5"><i
+									class="fa-brands fa-github"></i> GitHub</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+	<!-- ---------- PROJECT TAB END ----------- -->
+
+
+
+	<!-- ---------- CONTACT TAB START ----------- -->
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4"><i class="fa-regular fa-address-book"></i> Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p><i class="fa-solid fa-location-dot"></i> Kolkata, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="phone://+91 7432828388"><i class="fa-solid fa-mobile-retro"></i> +91 7432828388</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fa-solid fa-envelope-circle-check"></i>
+								mr.narendranathpanda@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1iwyL6JiGsb-J7NMZKcxs-FWCFrAE4S6S/view?usp=sharing"><i
+									class="fa-solid fa-file-arrow-down"></i> resumelink</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSddvqPMvEvKOiGcZrq0rkryNtuLvo-8PcoO_VbcUxf1XoJxrQ/viewform?usp=sf_link" class="btn btn-primary py-3 px-5">Click
+									Here <i class="fa-solid fa-computer-mouse"></i></a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a
+								href="https://www.youtube.com/channel/UCwIGKATQHrzbqHPoGXk7Znw"><span
+									class="icon-youtube"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://www.linkedin.com/in/narendra-nath-panda-574746216/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://x.com/NARENDRANATHP20?t=Uld0yK4iZCC28VJ0FVbVWA&s=09"><span
+									class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://www.facebook.com/narendranath.panda.3?mibextid=ZbWKwL"><span
+									class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://www.instagram.com/narendranathpanda?igsh=NGJhOTUxdzlmaWFz"><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+	<!-- ---------- CONTACT TAB END ----------- -->
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
+							href="https://github.com/NarendraNathPanda" target="_blank">Narendra Nath Panda</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
